@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Name Giggle</h1>
+    </div>
+
+</div class="container">
+    <form action="/" method="post">
+        <label>Name</label>
+        <input style="outline: none;"  type="text" name="user" value="" />
+        <input type="submit" value="Submit" />
+    </form>
+    <div class="item">
+        <% if(typeof content !== 'undefined' && content.error) {%>
+            <p> <%= content.message %></p>
+        <% } else { %>
+        <% if(typeof content !== 'undefined' && content.type=="single") { %>
+       <p> <%= content.joke%></p>
+        <% } if(typeof content !== 'undefined' && content.type=="twopart") { %>
+        <p> <%= content.setup %> <br>
+            <%= content.delivery %></p>
+        <% } %>
+        <% } %>
+    </div>
+<div>
+
+</body>
+
+</html>
